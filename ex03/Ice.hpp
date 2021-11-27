@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:04:59 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/26 21:05:29 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/27 19:22:55 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,13 @@ class Ice: public AMateria {
 
 	public:
 		Ice();
+		Ice(const Ice& other);
 		~Ice();
-		Ice(Ice& const other);
-		Ice&	operator=(Ice& const other);
+
+		Ice&	operator=(const Ice& other);
+
+		virtual AMateria*	clone(void) const;
+		virtual void		use(ICharacter& target);
 };
 
 #endif

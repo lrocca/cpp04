@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:05:40 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/26 21:11:39 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/27 19:18:07 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 # include <string>
 # include "AMateria.hpp"
 
+class	AMateria;
+
 class ICharacter {
 	public:
 		ICharacter();
-		virtual ~ICharacter();
-		ICharacter(ICharacter& const other);
-		ICharacter&	operator=(ICharacter& const other);
+		virtual ~ICharacter() { };
+		ICharacter(const ICharacter& other);
+		ICharacter&	operator=(const ICharacter& other);
 
 		virtual const std::string&	getName() const = 0;
 		virtual void				equip(AMateria* m) = 0;

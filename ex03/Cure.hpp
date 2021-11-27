@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:05:05 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/26 21:05:06 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/27 19:22:52 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,13 @@ class Cure: public AMateria {
 
 	public:
 		Cure();
+		Cure(const Cure& other);
 		~Cure();
-		Cure(Cure& const other);
-		Cure&	operator=(Cure& const other);
+
+		Cure&	operator=(const Cure& other);
+
+		virtual AMateria*	clone(void) const;
+		virtual void		use(ICharacter& target);
 };
 
 #endif

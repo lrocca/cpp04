@@ -6,13 +6,14 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:09:50 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/26 21:16:32 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/27 16:26:02 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 #include "Ice.hpp"
 #include "Character.hpp"
+#include "MateriaSource.hpp"
 
 int	main(void) {
 	IMateriaSource* src = new MateriaSource();
