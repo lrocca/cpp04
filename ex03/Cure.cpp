@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:05:08 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/27 19:25:06 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:50:05 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,14 @@
 
 #include "Cure.hpp"
 
-Cure::Cure() {
-}
+Cure::Cure(): AMateria("cure") {}
 
-Cure::~Cure() {
-}
+Cure::Cure(const Cure& other): AMateria(other) {}
 
-Cure::Cure(const Cure& other) {
-	*this = other;
-}
+Cure::~Cure() {}
 
 Cure&	Cure::operator=(const Cure& other) {
-	if (this != &other) {
-	}
+	if (this != &other) {}
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:05:03 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/27 17:31:39 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:52:57 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 #include "Ice.hpp"
 
-Ice::Ice(): AMateria("ice") { }
+Ice::Ice(): AMateria("ice") {}
 
-Ice::~Ice() { }
+Ice::Ice(const Ice& other): AMateria(other) {}
 
-Ice::Ice(const Ice& other): AMateria(other.type) { }
+Ice::~Ice() {}
 
 Ice&	Ice::operator=(const Ice& other) {
-	(void)other;
+	if (this != &other) {}
 	return *this;
 }
 
