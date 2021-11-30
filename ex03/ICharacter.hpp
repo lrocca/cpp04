@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:05:40 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/27 19:18:07 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 10:12:04 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ class	AMateria;
 
 class ICharacter {
 	public:
-		ICharacter();
-		virtual ~ICharacter() { };
-		ICharacter(const ICharacter& other);
-		ICharacter&	operator=(const ICharacter& other);
+		virtual ~ICharacter() {};
 
 		virtual const std::string&	getName() const = 0;
 		virtual void				equip(AMateria* m) = 0;
