@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:11:48 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/27 17:20:22 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:43:15 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ class Character: public ICharacter {
 		AMateria**	inventory;
 	public:
 		Character(const std::string& name);
-		~Character();
 		Character(const Character& other);
+		~Character();
+
 		Character&	operator=(const Character& other);
 
 		const std::string&	getName() const;
