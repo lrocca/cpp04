@@ -6,15 +6,24 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 21:11:50 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/27 19:16:37 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 12:06:37 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(const std::string& name): ICharacter(), name(name), inventory(new AMateria*[INV_SIZE]) {
+Character::Character(const std::string& name)
+	: ICharacter()
+	, name(name)
+	, inventory(new AMateria*[INV_SIZE]) {
 	for (size_t i = 0; i < INV_SIZE; i++)
 		inventory[i] = NULL;
+}
+
+Character::Character(const Character& other) {
+	for (size_t i = 0; i < INV_SIZE; i++)
+		if (other.inventory[i])
+			inventory[i] = other.inventory[i]->clone();
 }
 
 Character::~Character() {
@@ -24,12 +33,16 @@ Character::~Character() {
 	delete [] inventory;
 }
 
-Character::Character(const Character& other) {
-	*this = other;
-}
-
 Character&	Character::operator=(const Character& other) {
 	if (this != &other) {
+		for (size_t i = 0; i < INV_SIZE; i++)
+			if (inventory[i])
+				delete inventory[i];
+		for (size_t i = 0; i < INV_SIZE; i++)
+			if (other.inventory[i])
+				inventory[i] = other.inventory[i]->clone();
+			else
+				inventory[i] = NULL;
 	}
 	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:27:55 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/27 19:46:55 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 12:01:35 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@ MateriaSource::MateriaSource(): known(new AMateria*[KNOWN_SIZE]) {
 		known[i] = NULL;
 }
 
+MateriaSource::MateriaSource(const MateriaSource& other)
+	: known(new AMateria*[KNOWN_SIZE]) {
+	for (size_t i = 0; i < KNOWN_SIZE; i++)
+		if (other.known[i])
+			known[i] = other.known[i];
+		else
+			known[i] = NULL;
+}
+
 MateriaSource::~MateriaSource() {
 	for (size_t i = 0; i < KNOWN_SIZE; i++)
 		if (known[i])
@@ -24,12 +33,16 @@ MateriaSource::~MateriaSource() {
 	delete [] known;
 }
 
-MateriaSource::MateriaSource(const MateriaSource& other) {
-	*this = other;
-}
-
 MateriaSource&	MateriaSource::operator=(const MateriaSource& other) {
 	if (this != &other) {
+		for (size_t i = 0; i < KNOWN_SIZE; i++)
+			if (known[i])
+				delete known[i];
+		for (size_t i = 0; i < KNOWN_SIZE; i++)
+			if (other.known[i])
+				known[i] = other.known[i];
+			else
+				known[i] = NULL;
 	}
 	return *this;
 }
