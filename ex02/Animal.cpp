@@ -6,12 +6,11 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:43:29 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/26 20:54:20 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:05:00 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
 #include "Animal.hpp"
 
 Animal::Animal(): type("Animal") {
