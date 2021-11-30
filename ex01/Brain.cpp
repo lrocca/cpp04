@@ -6,12 +6,11 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:50:22 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/26 20:29:19 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:04:22 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
 #include "Brain.hpp"
 
 Brain::Brain(): index(0) {
