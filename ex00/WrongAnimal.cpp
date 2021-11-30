@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:43:29 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:31:10 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:47:32 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ WrongAnimal::~WrongAnimal() {
 }
 
 WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& other) {
-	if (this != &other) { }
+	if (this != &other) {}
 	return *this;
 }
 

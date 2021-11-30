@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:46:15 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:29:11 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:47:32 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Dog::~Dog() {
 }
 
 Dog&	Dog::operator=(const Dog& other) {
-	if (this != &other) { }
+	if (this != &other) {}
 	return *this;
 }
 
