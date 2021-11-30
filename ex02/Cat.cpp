@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:46:03 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:17:10 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:41:23 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat(): Animal() {
 	brain = new Brain();
 }
 
-Cat::Cat(const Cat& other) {
+Cat::Cat(const Cat& other): Animal(other) {
 	std::cout << "Cat\tcopy constructor called" << std::endl;
 	delete brain;
 	brain = new Brain(*other.brain);

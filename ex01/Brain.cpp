@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:50:22 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:16:01 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:39:36 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Brain::Brain(): index(0) {
 	std::cout << "Brain\tdefault constructor called" << std::endl;
 }
 
-Brain::Brain(const Brain& other) {
+Brain::Brain(const Brain& other): index(0) {
 	std::cout << "Brain\tcopy constructor called" << std::endl;
 	for (int i = 0; i < 100; i++)
 		ideas[i] = other.ideas[i];

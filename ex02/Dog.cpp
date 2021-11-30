@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:46:15 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:17:16 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:41:27 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog(): Animal() {
 	brain = new Brain();
 }
 
-Dog::Dog(const Dog& other) {
+Dog::Dog(const Dog& other): Animal(other) {
 	std::cout << "Dog\tcopy constructor called" << std::endl;
 	delete brain;
 	brain = new Brain(*other.brain);
