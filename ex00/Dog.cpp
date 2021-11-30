@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:46:15 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:15:26 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:29:11 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ Dog::Dog(): Animal() {
 	type = "Dog";
 }
 
-Dog::Dog(const Dog& other) {
-	*this = other;
+Dog::Dog(const Dog& other): Animal(other) {
+	std::cout << "Dog\tcopy constructor called" << std::endl;
 }
 
 Dog::~Dog() {
