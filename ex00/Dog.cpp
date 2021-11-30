@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:46:15 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:02:49 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:15:26 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ Dog::Dog(): Animal() {
 	type = "Dog";
 }
 
-Dog::~Dog() {
-	std::cout << "Dog\tdestructor called" << std::endl;
-}
-
 Dog::Dog(const Dog& other) {
 	*this = other;
+}
+
+Dog::~Dog() {
+	std::cout << "Dog\tdestructor called" << std::endl;
 }
 
 Dog&	Dog::operator=(const Dog& other) {

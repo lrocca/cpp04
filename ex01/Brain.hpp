@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:50:25 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/26 20:24:18 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:12:19 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ class Brain {
 		int			index;
 	public:
 		Brain();
-		~Brain();
 		Brain(const Brain& other);
+		~Brain();
+
 		Brain&	operator=(const Brain& other);
 
 		void	setIdea(const std::string& idea);

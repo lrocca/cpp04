@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:43:32 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/25 22:14:42 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:11:41 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ class Animal {
 		std::string	type;
 	public:
 		Animal();
-		virtual ~Animal();
 		Animal(const Animal& other);
+		virtual ~Animal();
+
 		Animal&	operator=(const Animal& other);
 
 		std::string const	&getType(void) const;

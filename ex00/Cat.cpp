@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:46:03 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:02:45 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:15:15 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ Cat::Cat(): Animal() {
 	type = "Cat";
 }
 
-Cat::~Cat() {
-	std::cout << "Cat\tdestructor called" << std::endl;
-}
-
 Cat::Cat(const Cat& other) {
 	*this = other;
+}
+
+Cat::~Cat() {
+	std::cout << "Cat\tdestructor called" << std::endl;
 }
 
 Cat&	Cat::operator=(const Cat& other) {

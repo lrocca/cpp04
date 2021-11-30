@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:46:03 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:03:40 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:15:46 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ WrongCat::WrongCat(): WrongAnimal() {
 	type = "WrongCat";
 }
 
-WrongCat::~WrongCat() {
-	std::cout << "WrongCat\tdestructor called" << std::endl;
-}
-
 WrongCat::WrongCat(const WrongCat& other) {
 	*this = other;
+}
+
+WrongCat::~WrongCat() {
+	std::cout << "WrongCat\tdestructor called" << std::endl;
 }
 
 WrongCat&	WrongCat::operator=(const WrongCat& other) {

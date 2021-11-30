@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:43:29 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:03:23 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:15:35 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ WrongAnimal::WrongAnimal(): type("WrongAnimal") {
 	std::cout << "WrongAnimal\tconstructor called" << std::endl;
 }
 
-WrongAnimal::~WrongAnimal() {
-	std::cout << "WrongAnimal\tdestructor called" << std::endl;
-}
-
 WrongAnimal::WrongAnimal(const WrongAnimal& other) {
 	*this = other;
+}
+
+WrongAnimal::~WrongAnimal() {
+	std::cout << "WrongAnimal\tdestructor called" << std::endl;
 }
 
 WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& other) {

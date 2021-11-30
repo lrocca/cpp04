@@ -6,7 +6,7 @@
 /*   By: lrocca <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 18:43:29 by lrocca            #+#    #+#             */
-/*   Updated: 2021/11/30 11:05:00 by lrocca           ###   ########.fr       */
+/*   Updated: 2021/11/30 11:16:22 by lrocca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ Animal::Animal(): type("Animal") {
 	std::cout << "Animal\tdefault constructor called" << std::endl;
 }
 
-Animal::~Animal() {
-	std::cout << "Animal\tdestructor called" << std::endl;
-}
-
 Animal::Animal(const Animal& other) {
 	std::cout << "Animal\tcopy constructor called" << std::endl;
 	*this = other;
+}
+
+Animal::~Animal() {
+	std::cout << "Animal\tdestructor called" << std::endl;
 }
 
 Animal&	Animal::operator=(const Animal& other) {
